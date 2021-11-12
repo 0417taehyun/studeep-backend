@@ -40,10 +40,8 @@ server.include_router(api_router, prefix=common_settings.COMMON_API)
 
 if __name__ == "__main__":
     uvicorn.run(
-        'app.main:server',
+        'src.main:server',
         host         = "0.0.0.0",
         port         = 8000,
-        reload       = True,
-        ssl_keyfile  = '/etc/letsencrypt/live/api.studeep.com/privkey.pem',
-        ssl_certfile = '/etc/letsencrypt/live/api.studeep.com/fullchain.pem'
+        reload       = True
     )
